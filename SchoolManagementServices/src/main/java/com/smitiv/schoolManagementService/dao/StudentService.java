@@ -1,5 +1,7 @@
 package com.smitiv.schoolManagementService.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class StudentService {
 
 	public StudentDetails saveStudentDetails(StudentDetails student) {
 		return studentRepo.save(student);
+
+	}
+	
+	public List<StudentDetails> findAllStudents() {
+		return studentRepo.findAll();
 
 	}
 
