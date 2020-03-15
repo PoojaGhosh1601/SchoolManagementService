@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.smitiv.schoolManagementService.studentDetails.StudentDetails;
 
-@Repository(value="studentRepo")
+@Repository(value = "studentRepo")
 public interface StudentRepo extends JpaRepository<StudentDetails, Long> {
 
 }
