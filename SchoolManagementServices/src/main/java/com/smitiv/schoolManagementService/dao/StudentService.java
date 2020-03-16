@@ -1,6 +1,7 @@
 package com.smitiv.schoolManagementService.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,11 @@ public class StudentService {
 	
 	public List<StudentDetails> findAllStudents() {
 		return studentRepo.findAll();
+
+	}
+	
+	public Optional<StudentDetails> findAStudentRecord(Long studentid) {
+		return studentRepo.findById(studentid);
 
 	}
 
